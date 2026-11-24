@@ -150,7 +150,7 @@
       grid-template-columns: 1.45fr 0.85fr;
       gap: 4rem;
       align-items: start;
-      margin-bottom: 4.5rem;
+      margin-bottom: 4rem;
     }
 
     .eyebrow {
@@ -228,7 +228,7 @@
       padding: 2rem 0;
       border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
     }
 
     .metric-item h3 {
@@ -245,45 +245,198 @@
       color: var(--text-muted);
     }
 
-    /* Editorial Three-Column Philosophy, AI & What I'm Looking For */
-    .editorial-split {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      margin-bottom: 4rem;
+    /* Toggleable Editorial Spotlight Carousel */
+    .spotlight-carousel {
+      margin-bottom: 3.5rem;
     }
 
-    .editorial-box {
+    .carousel-tabs {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.1rem;
+    }
+
+    .spotlight-tab {
       background-color: var(--bg-card);
       border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 2rem;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 0.65rem 1.15rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
 
-    .editorial-box.navy-accent {
+    .spotlight-tab:hover {
+      color: var(--navy-deep);
+      border-color: var(--navy-mid);
+    }
+
+    .spotlight-tab.active {
       background-color: var(--navy-deep);
-      color: #F4F6F9;
+      color: #FFFFFF;
       border-color: var(--navy-deep);
     }
 
-    .editorial-box h2 {
-      font-family: var(--font-serif);
-      font-size: 1.55rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
-      color: var(--navy-deep);
-      line-height: 1.25;
+    .spotlight-box {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 2.5rem 2.75rem;
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
     }
 
-    .editorial-box.navy-accent h2 {
+    .spotlight-box.theme-navy {
+      background-color: var(--navy-deep);
+      border-color: var(--navy-deep);
       color: #FFFFFF;
     }
 
-    .editorial-box.navy-accent p {
-      color: #D2DCE8;
-      font-size: 0.95rem;
-      line-height: 1.75;
+    .spotlight-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .spotlight-index {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--accent-gold);
+    }
+
+    .spotlight-box.theme-navy .spotlight-index {
+      color: #D6BC8B;
+    }
+
+    .spotlight-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .arrow-btn {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--navy-deep);
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .arrow-btn:hover {
+      background-color: var(--navy-deep);
+      color: #FFFFFF;
+      border-color: var(--navy-deep);
+    }
+
+    .spotlight-box.theme-navy .arrow-btn {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+    }
+
+    .spotlight-box.theme-navy .arrow-btn:hover {
+      background-color: #FFFFFF;
+      color: var(--navy-deep);
+    }
+
+    .spotlight-box h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+      font-weight: 400;
+      color: var(--navy-deep);
       margin-bottom: 1.1rem;
+      line-height: 1.2;
+    }
+
+    .spotlight-box.theme-navy h2 {
+      color: #FFFFFF;
+    }
+
+    .spotlight-copy p {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      line-height: 1.78;
+      margin-bottom: 1rem;
+      max-width: 860px;
+    }
+
+    .spotlight-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .spotlight-box.theme-navy .spotlight-copy p {
+      color: #D8E1EC;
+    }
+
+    .spotlight-footer-bar {
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .spotlight-box.theme-navy .spotlight-footer-bar {
+      border-top-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .dots {
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #CBD5E1;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.2s ease;
+    }
+
+    .dot.active {
+      width: 22px;
+      border-radius: 999px;
+      background-color: var(--navy-deep);
+    }
+
+    .spotlight-box.theme-navy .dot {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .spotlight-box.theme-navy .dot.active {
+      background-color: #FFFFFF;
+    }
+
+    .step-counter {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .spotlight-box.theme-navy .step-counter {
+      color: #B8C7D9;
     }
 
     /* Stack Tags */
@@ -525,7 +678,6 @@
 
     @media (max-width: 860px) {
       .hero-grid,
-      .editorial-split,
       .quotes-grid,
       .case-details.open {
         grid-template-columns: 1fr;
@@ -534,6 +686,10 @@
       .metrics-bar {
         grid-template-columns: 1fr;
         gap: 1.25rem;
+      }
+
+      .spotlight-box {
+        padding: 1.65rem;
       }
 
       .hero-grid {
@@ -604,35 +760,42 @@
         </div>
       </div>
 
-      <div class="editorial-split">
-        <div class="editorial-box">
-          <h2>Why Cross-Functional Range Is an Asset</h2>
-          <p class="body-text">
-            In traditional org charts, people are often asked to pick a single narrow lane—just campaign execution, just CRM administration, or just front-end code. Because I’ve worn many hats across operations, technical project management, accounting, and software development, I naturally operate at the intersections where most projects stall.
-          </p>
-          <p class="body-text" style="margin-bottom: 0;">
-            Seeing the big picture isn't a lack of focus—it's how I spot upstream data issues before they break downstream reporting, translate effortlessly between engineering and marketing stakeholders, and design systems that actually work for the humans using them.
-          </p>
+      <!-- Toggleable Large Spotlight Carousel -->
+      <div class="spotlight-carousel">
+        <div class="carousel-tabs" role="tablist" aria-label="Perspective topics">
+          <button class="spotlight-tab active" onclick="setSpotlight(0)">Why Cross-Functional Range Is an Asset</button>
+          <button class="spotlight-tab" onclick="setSpotlight(1)">How I Think About &amp; Use AI</button>
+          <button class="spotlight-tab" onclick="setSpotlight(2)">What I’m Looking For Next</button>
         </div>
 
-        <div class="editorial-box">
-          <h2>How I Think About &amp; Use AI</h2>
-          <p class="body-text">
-            I view AI as an operational multiplier—not a replacement for sound systems architecture or clean data governance. Without solid underlying workflows, AI just automates chaos faster.
-          </p>
-          <p class="body-text" style="margin-bottom: 0;">
-            In practice, I use AI as a force multiplier in my own builds—accelerating custom internal web app development, scripting, and automated QA—while helping teams identify pragmatic, high-ROI ways to embed AI into daily operations without compromising compliance or quality.
-          </p>
-        </div>
+        <div id="spotlight-card" class="spotlight-box">
+          <div class="spotlight-top-row">
+            <span id="spotlight-kicker" class="spotlight-index">Perspective &bull; Range &amp; Big-Picture Thinking</span>
+            <div class="spotlight-controls">
+              <button class="arrow-btn" aria-label="Previous card" onclick="stepSpotlight(-1)">&larr;</button>
+              <button class="arrow-btn" aria-label="Next card" onclick="stepSpotlight(1)">&rarr;</button>
+            </div>
+          </div>
 
-        <div class="editorial-box navy-accent">
-          <h2>What I’m Looking For Next</h2>
-          <p>
-            I am seeking a high-impact remote leadership, systems architecture, or technical project management role—or strategic consulting partnerships—where breadth of perspective is treated as a competitive advantage.
-          </p>
-          <p style="margin-bottom: 0;">
-            I thrive in environments with autonomy, clear outcomes, and complex operational puzzles: standing up global lifecycle engines, bridging MarTech and custom engineering, aligning cross-functional teams, and replacing manual busywork with thoughtful automation.
-          </p>
+          <h2 id="spotlight-title">Why Cross-Functional Range Is an Asset</h2>
+
+          <div id="spotlight-body" class="spotlight-copy">
+            <p>
+              In traditional org charts, people are often asked to pick a single narrow lane—just campaign execution, just CRM administration, or just front-end code. Because I’ve worn many hats across operations, technical project management, accounting, and software development, I naturally operate at the intersections where most projects stall.
+            </p>
+            <p>
+              Seeing the big picture isn't a lack of focus—it's how I spot upstream data issues before they break downstream reporting, translate effortlessly between engineering and marketing stakeholders, and design systems that actually work for the humans using them.
+            </p>
+          </div>
+
+          <div class="spotlight-footer-bar">
+            <div class="dots" id="spotlight-dots">
+              <button class="dot active" aria-label="Card 1" onclick="setSpotlight(0)"></button>
+              <button class="dot" aria-label="Card 2" onclick="setSpotlight(1)"></button>
+              <button class="dot" aria-label="Card 3" onclick="setSpotlight(2)"></button>
+            </div>
+            <span id="spotlight-counter" class="step-counter">01 / 03</span>
+          </div>
         </div>
       </div>
 
@@ -821,6 +984,71 @@
   </footer>
 
   <script>
+    const spotlightCards = [
+      {
+        kicker: "Perspective • Range & Big-Picture Thinking",
+        title: "Why Cross-Functional Range Is an Asset",
+        themeNavy: false,
+        paragraphs: [
+          "In traditional org charts, people are often asked to pick a single narrow lane—just campaign execution, just CRM administration, or just front-end code. Because I’ve worn many hats across operations, technical project management, accounting, and software development, I naturally operate at the intersections where most projects stall.",
+          "Seeing the big picture isn't a lack of focus—it's how I spot upstream data issues before they break downstream reporting, translate effortlessly between engineering and marketing stakeholders, and design systems that actually work for the humans using them."
+        ]
+      },
+      {
+        kicker: "Perspective • Applied AI & Automation",
+        title: "How I Think About & Use AI",
+        themeNavy: false,
+        paragraphs: [
+          "I view AI as an operational multiplier—not a replacement for sound systems architecture or clean data governance. Without solid underlying workflows, AI just automates chaos faster.",
+          "In practice, I use AI as a force multiplier in my own builds—accelerating custom internal web app development, scripting, and automated QA—while helping teams identify pragmatic, high-ROI ways to embed AI into daily operations without compromising compliance or quality."
+        ]
+      },
+      {
+        kicker: "Direction • Roles & Partnerships",
+        title: "What I’m Looking For Next",
+        themeNavy: true,
+        paragraphs: [
+          "I am seeking a high-impact remote leadership, systems architecture, or technical project management role—or strategic consulting partnerships—where breadth of perspective is treated as a competitive advantage.",
+          "I thrive in environments with autonomy, clear outcomes, and complex operational puzzles: standing up global lifecycle engines, bridging MarTech and custom engineering, aligning cross-functional teams, and replacing manual busywork with thoughtful automation."
+        ]
+      }
+    ];
+
+    let activeSpotlight = 0;
+
+    function renderSpotlight() {
+      const item = spotlightCards[activeSpotlight];
+      const card = document.getElementById("spotlight-card");
+      card.classList.toggle("theme-navy", item.themeNavy);
+
+      document.getElementById("spotlight-kicker").textContent = item.kicker;
+      document.getElementById("spotlight-title").textContent = item.title;
+      document.getElementById("spotlight-body").innerHTML = item.paragraphs
+        .map(p => `<p>${p}</p>`)
+        .join("");
+
+      document.getElementById("spotlight-counter").textContent =
+        `0${activeSpotlight + 1} / 0${spotlightCards.length}`;
+
+      document.querySelectorAll(".spotlight-tab").forEach((tab, idx) => {
+        tab.classList.toggle("active", idx === activeSpotlight);
+      });
+
+      document.querySelectorAll("#spotlight-dots .dot").forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === activeSpotlight);
+      });
+    }
+
+    function setSpotlight(index) {
+      activeSpotlight = index;
+      renderSpotlight();
+    }
+
+    function stepSpotlight(delta) {
+      activeSpotlight = (activeSpotlight + delta + spotlightCards.length) % spotlightCards.length;
+      renderSpotlight();
+    }
+
     function switchTab(tabName) {
       document.getElementById('btn-about').classList.toggle('active', tabName === 'about');
       document.getElementById('btn-work').classList.toggle('active', tabName === 'work');
