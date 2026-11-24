@@ -554,6 +554,101 @@
       color: var(--text-muted);
     }
 
+    /* Home quotes strip */
+    .home-quotes {
+      margin-bottom: 3.5rem;
+    }
+
+    .home-quotes-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .home-quotes-head .eyebrow {
+      margin-bottom: 0;
+    }
+
+    .home-quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .home-quotes .quote-card {
+      padding: 1.5rem;
+    }
+
+    .home-quotes .quote-card blockquote {
+      font-size: 1.02rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Recommendations page */
+    .recs-header {
+      max-width: 720px;
+      margin-bottom: 3rem;
+    }
+
+    .recs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      align-items: start;
+      margin-bottom: 1.5rem;
+    }
+
+    .rec-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    .rec-card blockquote {
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--navy-deep);
+      margin-bottom: 0.9rem;
+    }
+
+    .rec-person {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .rec-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .rec-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .rec-meta {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-top: 0.4rem;
+    }
+
+    .recs-note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
     /* CTA Banner */
     .cta-footer {
       margin-top: 4rem;
@@ -606,6 +701,8 @@
     @media (max-width: 860px) {
       .hero-grid,
       .quotes-grid,
+      .home-quotes-grid,
+      .recs-grid,
       .principles-grid,
       .case-details.open {
         grid-template-columns: 1fr;
@@ -636,6 +733,7 @@
       <nav>
         <button id="btn-about" class="nav-btn active" onclick="switchTab('about')">About</button>
         <button id="btn-work" class="nav-btn" onclick="switchTab('work')">Selected Work &amp; Architecture</button>
+        <button id="btn-recs" class="nav-btn" onclick="switchTab('recs')">Recommendations</button>
         <a href="mailto:hello@lianefarrant.com" class="nav-contact">Get in Touch</a>
       </nav>
     </div>
@@ -703,6 +801,31 @@
         </div>
       </div>
 
+      <!-- Home quotes -->
+      <div class="home-quotes">
+        <div class="home-quotes-head">
+          <span class="eyebrow">What the people I've worked with say</span>
+          <button class="expand-btn" onclick="switchTab('recs')">Read all recommendations &rarr;</button>
+        </div>
+        <div class="home-quotes-grid">
+          <div class="quote-card">
+            <blockquote>&ldquo;One of the most talented, smartest, fastest, most intelligent, and easy to work with marketing ops professionals I have ever worked with in my 20+ year career.&rdquo;</blockquote>
+            <div class="quote-author">Eric Rosen</div>
+            <div class="quote-role">CRM &amp; Lifecycle Marketing &middot; Managed Liane directly</div>
+          </div>
+          <div class="quote-card">
+            <blockquote>&ldquo;She doesn't just build programs; she makes the whole marketing setup more reliable and efficient.&rdquo;</blockquote>
+            <div class="quote-author">Firat Alatas</div>
+            <div class="quote-role">Head of Global Customer Journey, Google Cloud Demand Gen &amp; Growth</div>
+          </div>
+          <div class="quote-card">
+            <blockquote>&ldquo;She's a natural team leader who actively listens and empowers those around her.&rdquo;</blockquote>
+            <div class="quote-author">Zailyng Burgos</div>
+            <div class="quote-role">Google Generative AI Leader &middot; Colleague</div>
+          </div>
+        </div>
+      </div>
+
       <div class="metrics-bar">
         <div class="metric-item">
           <h3>$0 &rarr; $150M</h3>
@@ -728,7 +851,7 @@
             <p>I embed myself in the systems and teams I support, learning how the work really happens so I can improve it from the inside. I invest in relationships across the organization, because trust is what turns a sound solution into one people adopt, and the people matter as much as the systems. A committed problem solver, I'm always looking for more effective, scalable ways to run the work, and I turn those improvements into lasting solutions: streamlined processes, thoughtful automation, and documentation and training that teams can build on long after the project ends. The result is operations that run smoothly, scale without strain, and work for the people who rely on them.</p>
           </article>
           <article class="principle-card navy">
-            <h3>What I'm looking for & why</h3>
+            <h3>Range on purpose</h3>
             <p>Lifecycle, platform administration, CRM sync, automation, analytics, project leadership, and AI are only part of the picture. My breadth is deliberate, not scattered: I understand how systems, data, workflows, reporting, and teams connect end to end, so I can step into new roles and responsibilities within the same realm with confidence. That's why I'm looking for senior roles across marketing operations and adjacent areas, from lifecycle and martech architecture to automation and program leadership, and why I seek out the ones that stretch me: growth makes me better at all of it.</p>
           </article>
         </div>
@@ -912,6 +1035,80 @@
         <a href="mailto:hello@lianefarrant.com" class="cta-btn">Start a Conversation</a>
       </div>
     </section>
+
+    <!-- PAGE 3: RECOMMENDATIONS -->
+    <section id="page-recs" class="page-section">
+      <div class="recs-header">
+        <span class="eyebrow">Recommendations</span>
+        <h1>What the people I've worked with say.</h1>
+        <p class="body-text">
+          Leaders, managers, and colleagues across Google Cloud and beyond, in their own words.
+        </p>
+      </div>
+
+      <div class="recs-grid">
+          <article class="rec-card">
+            <blockquote>&ldquo;Liane took very detailed technical requirements and turned them into a solid, high-performing global nurture engine. Her Marketo knowledge is top-tier, which allowed her to move our organization from many fragmented regional streams into one unified global setup.&rdquo;</blockquote>
+            <blockquote>&ldquo;She doesn't just build programs; she makes the whole marketing setup more reliable and efficient.&rdquo;</blockquote>
+            <div class="rec-person">
+              <div class="rec-name">Firat Alatas</div>
+              <div class="rec-role">Head of Global Customer Journey, Google Cloud Demand Gen &amp; Growth</div>
+              <div class="rec-meta">Letter of recommendation</div>
+            </div>
+          </article>
+          <article class="rec-card">
+            <blockquote>&ldquo;Liane is one of the most talented, smartest, fastest, most intelligent, and easy to work with marketing ops professionals I have ever worked with in my 20+ year career. She handled every challenge that I threw her way with ease and grace.&rdquo;</blockquote>
+            <div class="rec-person">
+              <div class="rec-name">Eric Rosen</div>
+              <div class="rec-role">CRM &amp; Lifecycle Marketing</div>
+              <div class="rec-meta">Managed Liane directly &middot; LinkedIn, February 2026</div>
+            </div>
+          </article>
+          <article class="rec-card">
+            <blockquote>&ldquo;Liane possesses a unique talent for solving complex business problems through smart, clever automation. She designs architectures that are scalable and resilient. Whether working in Marketo or Salesforce, she crafts solutions that solve immediate pain points while supporting long-term growth. Her technical vision turns complex, messy requirements into elegant, automated executions.&rdquo;</blockquote>
+            <div class="rec-person">
+              <div class="rec-name">Gregory Pothier</div>
+              <div class="rec-role">Senior Marketing Manager, Google Cloud</div>
+              <div class="rec-meta">Letter of recommendation &middot; January 2026</div>
+            </div>
+          </article>
+          <article class="rec-card">
+            <blockquote>&ldquo;What truly set Liane apart was her proactive approach to process improvement. Despite the demanding nature of the project, she made time to identify and implement optimizations that benefited not only my workflow but the entire team's.&rdquo;</blockquote>
+            <blockquote>&ldquo;She's more than just an exceptional project manager&mdash;she's a natural team leader who actively listens and empowers those around her.&rdquo;</blockquote>
+            <div class="rec-person">
+              <div class="rec-name">Zailyng Burgos</div>
+              <div class="rec-role">Google Generative AI Leader</div>
+              <div class="rec-meta">Colleague &middot; LinkedIn, February 2026</div>
+            </div>
+          </article>
+          <article class="rec-card">
+            <blockquote>&ldquo;Liane is talented at evaluating and implementing new marketing tools, as she did with the implementation of Knak to streamline the building of email and landing pages. She never backs down from a challenge, working with a global team to define complex new processes and enable a large, remote production team. She is technically adept and quickly learns new tools such as how to build AI agents.&rdquo;</blockquote>
+            <div class="rec-person">
+              <div class="rec-name">Ruth Baucom</div>
+              <div class="rec-role">Marketing Automation Advisor, Google</div>
+              <div class="rec-meta">Letter of recommendation</div>
+            </div>
+          </article>
+          <article class="rec-card">
+            <blockquote>&ldquo;She is an exceptionally talented professional who excels at building complex cross-platform processes and designing intricate logic-driven solutions. Beyond her technical expertise, Liane is thoughtful, professional, and a true pleasure to work with.&rdquo;</blockquote>
+            <div class="rec-person">
+              <div class="rec-name">Maya Parada</div>
+              <div class="rec-role">Marketing Operations Strategist &middot; B2B SaaS, Martech &amp; RevOps</div>
+              <div class="rec-meta">Worked with Liane on a different team at Google Cloud &middot; LinkedIn, June 2026</div>
+            </div>
+          </article>
+      </div>
+
+      <p class="recs-note">Full letters of recommendation are available on request.</p>
+
+      <div class="cta-footer">
+        <div>
+          <h3>Want to talk about what I could do for your team?</h3>
+          <p>I'd love to hear what you're building.</p>
+        </div>
+        <a href="mailto:hello@lianefarrant.com" class="cta-btn">Start a Conversation</a>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -920,11 +1117,10 @@
 
   <script>
     function switchTab(tabName) {
-      document.getElementById('btn-about').classList.toggle('active', tabName === 'about');
-      document.getElementById('btn-work').classList.toggle('active', tabName === 'work');
-
-      document.getElementById('page-about').classList.toggle('active', tabName === 'about');
-      document.getElementById('page-work').classList.toggle('active', tabName === 'work');
+      ['about', 'work', 'recs'].forEach(function (name) {
+        document.getElementById('btn-' + name).classList.toggle('active', tabName === name);
+        document.getElementById('page-' + name).classList.toggle('active', tabName === name);
+      });
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
