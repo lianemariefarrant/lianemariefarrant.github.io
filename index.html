@@ -1013,31 +1013,64 @@
       </div>
 
       <div class="case-grid">
-        <!-- Case Study 1 -->
+        <!-- Case Study 1: Global Nurture Program -->
         <article class="case-card">
           <div class="case-top">
             <div>
-              <div class="case-meta">Enterprise Lifecycle &amp; Custom Hub Engineering</div>
-              <h2 class="case-title">Global Nurture Program &amp; Global Nurture Hub</h2>
+              <div class="case-meta">Lifecycle Architecture &amp; Program Leadership</div>
+              <h2 class="case-title">Global Nurture Program</h2>
             </div>
-            <div class="case-impact-badge">$0 &rarr; $150M Pipeline Impact</div>
+            <div class="case-impact-badge">$0 &rarr; $150M+ Pipeline in ~1 Year</div>
           </div>
           <p class="case-summary">
-            Architected a global Marketo nurture program from scratch—growing from two tracks to multiple streams across 5–6 marketing teams, 10 languages, weekly interest-profile refreshes, and Velocity-driven promotional layers—while building a custom web app to centralize dual-quarter production.
+            I took a global nurture from a vision on a Miro board to $150M+ in pipeline in about a year, growing a single program into a family of interconnected, audience-specific programs built on one idea: a weekly-refreshing interest profile that routes each lead to the right nurture, stream, email, and language.
           </p>
-          <button class="expand-btn" onclick="toggleDetails('cs1', this)">View Architecture &amp; Breakdown +</button>
-          <div id="cs1" class="case-details">
+          <button class="expand-btn" onclick="toggleDetails('cs1', this)">Hide Architecture &amp; Breakdown &minus;</button>
+          <div id="cs1" class="case-details open">
             <div class="detail-col">
               <h4>The Challenge</h4>
-              <p>Starting from zero and scaling rapidly across 5–6 marketing teams, multiple streams per track, 4–5 emails per track, 10 language versions, and dynamic promotional overlays created immense operational complexity. Managing two quarters at once—launching current while prepping next—in spreadsheets and Google Docs became unsustainable.</p>
+              <p>As the first program succeeded, other teams wanted in, each with its own audience, tone, languages, and business rules. One giant program couldn't handle the different transition rules and localization, but separate programs risked losing a consistent global experience.</p>
             </div>
             <div class="detail-col">
               <h4>The Architecture &amp; Partnership</h4>
-              <p>Built the Marketo lifecycle engine from the ground up with a weekly-refreshing lead interest profile and Velocity tokens for modular promotional content. Partnered across content, promotional content, leadership, and activation/architecture teams, and engineered the Global Nurture Hub web app to centralize tracking, approvals, and execution.</p>
+              <p>I designed each audience as its own engagement program, with product-, industry-, or segment-specific streams of 4&ndash;5 emails, in up to 10 languages. Every email carried a promotional module built with Velocity tokens, adding three layers of dynamic content: region, language, and informational versus engagement messaging. Each program had its own tracking and Salesforce campaigns but shared one build pattern, so they worked as a single global nurture.</p>
+              <p style="margin-top: 0.85rem;">A weekly-refreshing interest profile, which we pioneered, looked at each lead's propensity and decided which nurture, stream, email, and language they received. If interest shifted to a new product area, the lead moved to that stream. If they stayed engaged in their current one, they stayed.</p>
+              <p style="margin-top: 0.85rem;">I partnered with the marketers behind each program, who owned copy and goals, and turned their business rules into program architecture. I coordinated copy and timelines and built every program, email, token, and campaign, every quarter.</p>
             </div>
             <div class="detail-col">
               <h4>The Outcome</h4>
-              <p>Scaled from $0 to $150M in attributed pipeline impact, unified multi-team workflows across overlapping quarters, and gave global stakeholders a single source of truth as volume expanded.</p>
+              <p>$150M+ in pipeline in about a year. The program scaled from one nurture to a family of programs without losing a consistent build pattern, and other teams adopted the interest-profile approach for their own high-propensity audiences.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case Study 1b: Global Nurture Hub -->
+        <article class="case-card">
+          <div class="case-top">
+            <div>
+              <div class="case-meta">Custom Internal Tooling &amp; Product Building</div>
+              <h2 class="case-title">Global Nurture Hub</h2>
+            </div>
+            <div class="case-impact-badge">3 hrs &rarr; Under 30 min per Email</div>
+          </div>
+          <p class="case-summary">
+            As more teams opted in, I taught myself to code alongside AI and built a web app that brought every marketer, builder, and stakeholder into one place, so I could run the current and upcoming quarters at once while onboarding a team.
+          </p>
+          <button class="expand-btn" onclick="toggleDetails('cs1b', this)">Hide Architecture &amp; Breakdown &minus;</button>
+          <div id="cs1b" class="case-details open">
+            <div class="detail-col">
+              <h4>The Challenge</h4>
+              <p>Spreadsheets and Google Docs couldn't track multiple programs, two quarters at a time, and a growing list of teams. Every new team meant duplicating the system, and I was running the program and onboarding a team at the same time.</p>
+            </div>
+            <div class="detail-col">
+              <h4>What I Built</h4>
+              <p><strong>For marketers:</strong> role-based workspaces so each team saw only its own nurture. They wrote copy in templates, sent themselves live tests by language, approved content, and tracked schedules and progress.</p>
+              <p style="margin-top: 0.85rem;"><strong>For the build team:</strong> one-click email builds in Marketo with correct branding, AI-assisted QA before and after each build, AI-assisted translation, localization import and export, change-request management, and generators for Velocity tokens, Salesforce campaigns, and UTM strings. It also tracked audience additions and suppressions, program transitions, pauses, and send-time changes.</p>
+              <p style="margin-top: 0.85rem;"><strong>For leadership:</strong> progress and launch-health dashboards for the current and upcoming quarter.</p>
+            </div>
+            <div class="detail-col">
+              <h4>The Outcome</h4>
+              <p>Build, QA, and approval for a single email dropped from about 3 hours to under 30 minutes. Everyone worked from one source of truth as volume grew, and I could onboard and manage a team while running the program.</p>
             </div>
           </div>
         </article>
