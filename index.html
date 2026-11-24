@@ -379,6 +379,21 @@
       font-weight: 400;
     }
 
+    .stack-groups {
+      display: grid;
+      gap: 1.75rem;
+    }
+
+    .stack-group h3 {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 0.65rem;
+    }
+
     .tags-wrap {
       display: flex;
       flex-wrap: wrap;
@@ -593,6 +608,38 @@
       margin-bottom: 3rem;
     }
 
+    .rec-themes {
+      margin-bottom: 3rem;
+    }
+
+    .rec-themes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 1rem 0 0.9rem;
+    }
+
+    .rec-theme {
+      background-color: var(--navy-tint);
+      border: 1px solid #D9E1EA;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .rec-theme h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--navy-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .rec-theme p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
     .recs-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -703,6 +750,7 @@
       .quotes-grid,
       .home-quotes-grid,
       .recs-grid,
+      .rec-themes-grid,
       .principles-grid,
       .case-details.open {
         grid-template-columns: 1fr;
@@ -732,7 +780,7 @@
       </a>
       <nav>
         <button id="btn-about" class="nav-btn active" onclick="switchTab('about')">About</button>
-        <button id="btn-work" class="nav-btn" onclick="switchTab('work')">Selected Work &amp; Architecture</button>
+        <button id="btn-work" class="nav-btn" onclick="switchTab('work')">Showcase</button>
         <button id="btn-recs" class="nav-btn" onclick="switchTab('recs')">Recommendations</button>
         <a href="mailto:hello@lianefarrant.com" class="nav-contact">Get in Touch</a>
       </nav>
@@ -787,7 +835,7 @@
           </div>
 
           <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-            <button class="nav-btn active" style="padding: 0.75rem 1.4rem;" onclick="switchTab('work')">Explore Case Studies &rarr;</button>
+            <button class="nav-btn active" style="padding: 0.75rem 1.4rem;" onclick="switchTab('work')">Explore the Showcase &rarr;</button>
             <a href="https://www.linkedin.com/in/liane-f-08204916a" target="_blank" rel="noopener" class="nav-contact" style="padding: 0.7rem 1.3rem;">LinkedIn Profile</a>
           </div>
         </div>
@@ -804,7 +852,7 @@
       <!-- Home quotes -->
       <div class="home-quotes">
         <div class="home-quotes-head">
-          <span class="eyebrow">What the people I've worked with say</span>
+          <span class="eyebrow">Recommendations from Leaders &amp; Colleagues</span>
           <button class="expand-btn" onclick="switchTab('recs')">Read all recommendations &rarr;</button>
         </div>
         <div class="home-quotes-grid">
@@ -851,27 +899,75 @@
             <p>I embed myself in the systems and teams I support, learning how the work really happens so I can improve it from the inside. I invest in relationships across the organization, because trust is what turns a sound solution into one people adopt, and the people matter as much as the systems. A committed problem solver, I'm always looking for more effective, scalable ways to run the work, and I turn those improvements into lasting solutions: streamlined processes, thoughtful automation, and documentation and training that teams can build on long after the project ends. The result is operations that run smoothly, scale without strain, and work for the people who rely on them.</p>
           </article>
           <article class="principle-card navy">
-            <h3>Range on purpose</h3>
+            <h3>What I'm looking for and why</h3>
             <p>Lifecycle, platform administration, CRM sync, automation, analytics, project leadership, and AI are only part of the picture. My breadth is deliberate, not scattered: I understand how systems, data, workflows, reporting, and teams connect end to end, so I can step into new roles and responsibilities within the same realm with confidence. That's why I'm looking for senior roles across marketing operations and adjacent areas, from lifecycle and martech architecture to automation and program leadership, and why I seek out the ones that stretch me: growth makes me better at all of it.</p>
           </article>
         </div>
       </div>
 
       <div class="stack-section">
-        <h2 class="section-label">Core Capabilities &amp; Technical Stack</h2>
-        <div class="tags-wrap">
-          <span class="tag highlight">Adobe Marketo Engage (2x ACE)</span>
-          <span class="tag highlight">Velocity Scripting &amp; Dynamic Tokens</span>
-          <span class="tag highlight">Salesforce (SFDC) Sync &amp; Architecture</span>
-          <span class="tag highlight">Technical Project Management</span>
-          <span class="tag highlight">AI-Assisted Workflow &amp; App Development</span>
-          <span class="tag">REST APIs &amp; Webhooks</span>
-          <span class="tag">HTML / CSS / JavaScript</span>
-          <span class="tag">Google Apps Script</span>
-          <span class="tag">Knak &amp; HubSpot</span>
-          <span class="tag">Automated QA &amp; Internal Tooling</span>
-          <span class="tag">Global Lifecycle &amp; Multi-Language Scale</span>
-          <span class="tag">Bubble.io</span>
+        <h2 class="section-label">Core Capabilities</h2>
+        <div class="stack-groups">
+          <div class="stack-group">
+            <h3>Lifecycle &amp; Strategy</h3>
+            <div class="tags-wrap">
+              <span class="tag highlight">Lifecycle Orchestration</span>
+              <span class="tag highlight">Global Nurture Program Architecture</span>
+              <span class="tag">ABM / ABX Programs</span>
+              <span class="tag">GTM Strategy</span>
+              <span class="tag">PQL &amp; Lead Scoring</span>
+              <span class="tag">Multi-Touch Attribution</span>
+              <span class="tag">A/B Testing</span>
+              <span class="tag">Multi-Language Scale</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h3>Platforms &amp; Martech</h3>
+            <div class="tags-wrap">
+              <span class="tag highlight">Adobe Marketo Engage</span>
+              <span class="tag highlight">Salesforce (SFDC)</span>
+              <span class="tag">HubSpot</span>
+              <span class="tag">Demandbase</span>
+              <span class="tag">Knak</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">DOMO</span>
+              <span class="tag">Marketing Studio</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h3>AI &amp; Automation</h3>
+            <div class="tags-wrap">
+              <span class="tag highlight">AI Agent Development</span>
+              <span class="tag highlight">Agentic Workflow Design</span>
+              <span class="tag">Workflow Automation</span>
+              <span class="tag">AI-Assisted App Development</span>
+              <span class="tag">Automated QA &amp; Internal Tooling</span>
+              <span class="tag">AI Enablement &amp; Adoption</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h3>Build &amp; Integration</h3>
+            <div class="tags-wrap">
+              <span class="tag highlight">Custom Web Applications</span>
+              <span class="tag">Marketo &harr; Salesforce Sync &amp; Architecture</span>
+              <span class="tag">REST APIs &amp; Webhooks</span>
+              <span class="tag">Velocity Scripting &amp; Dynamic Tokens</span>
+              <span class="tag">HTML / CSS / JavaScript</span>
+              <span class="tag">Google Apps Script</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <h3>Leadership &amp; Enablement</h3>
+            <div class="tags-wrap">
+              <span class="tag highlight">Technical Project Management</span>
+              <span class="tag">Stakeholder Management</span>
+              <span class="tag">Training &amp; Enablement</span>
+              <span class="tag">Change Management</span>
+              <span class="tag">Documentation &amp; Playbooks</span>
+              <span class="tag">UAT &amp; QA</span>
+              <span class="tag">Sprint &amp; Program Management</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -879,7 +975,7 @@
     <!-- PAGE 2: SELECTED WORK & ARCHITECTURE -->
     <section id="page-work" class="page-section">
       <div class="work-header">
-        <span class="eyebrow">Selected Work &amp; Systems Architecture</span>
+        <span class="eyebrow">Showcase</span>
         <h1>Problems solved through architecture, automation, and partnership.</h1>
         <p class="body-text">
           A closer look at how I approach complex operational bottlenecks—combining MarTech infrastructure, custom code, and cross-team alignment to deliver measurable results. Click any case study below to inspect the architecture.
@@ -1004,29 +1100,6 @@
         </article>
       </div>
 
-      <!-- Referral Quotes Section -->
-      <div class="quotes-section">
-        <span class="eyebrow">Endorsements &amp; Letters of Recommendation</span>
-        <h2 class="section-label">What leaders and partners say</h2>
-        <div class="quotes-grid">
-          <div class="quote-card">
-            <blockquote>
-              “[Placeholder: Insert your favorite excerpt from Gregory Pothier's January 2026 letter highlighting your Marketo SME expertise, proactive problem-solving, and ability to design complex, scalable automation architectures at Google Cloud.]”
-            </blockquote>
-            <div class="quote-author">Gregory Pothier</div>
-            <div class="quote-role">Senior Marketing Manager, Google Cloud</div>
-          </div>
-
-          <div class="quote-card">
-            <blockquote>
-              “[Placeholder: Insert your favorite excerpt from Eric Rosen's recommendation letter praising your Marketo mastery, efficiency, positive attitude under pressure, and that he would jump at the chance to work with you again.]”
-            </blockquote>
-            <div class="quote-author">Eric Rosen</div>
-            <div class="quote-role">Former Director of CRM, 9th Wonder</div>
-          </div>
-        </div>
-      </div>
-
       <div class="cta-footer">
         <div>
           <h3>Have a complex operational puzzle to solve?</h3>
@@ -1040,10 +1113,29 @@
     <section id="page-recs" class="page-section">
       <div class="recs-header">
         <span class="eyebrow">Recommendations</span>
-        <h1>What the people I've worked with say.</h1>
+        <h1>What leaders and colleagues say.</h1>
         <p class="body-text">
           Leaders, managers, and colleagues across Google Cloud and beyond, in their own words.
         </p>
+      </div>
+
+      <div class="rec-themes">
+        <span class="eyebrow">Recurring themes</span>
+        <div class="rec-themes-grid">
+          <div class="rec-theme">
+            <h3>Technical depth, made practical</h3>
+            <p>Described as a Marketo and Salesforce expert who designs scalable architectures and turns complex requirements into elegant automation.</p>
+          </div>
+          <div class="rec-theme">
+            <h3>Proactive improvement</h3>
+            <p>Consistently credited with spotting inefficiencies and fixing them, improving workflows for her own work and for the whole team.</p>
+          </div>
+          <div class="rec-theme">
+            <h3>Trusted and easy to work with</h3>
+            <p>Praised for handling challenges with ease and grace, leading with honesty, and empowering the people around her.</p>
+          </div>
+        </div>
+        <p class="recs-note">Themes drawn from the six recommendations below.</p>
       </div>
 
       <div class="recs-grid">
