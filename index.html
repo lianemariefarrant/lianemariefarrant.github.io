@@ -312,198 +312,58 @@
       color: var(--text-muted);
     }
 
-    /* Toggleable Editorial Spotlight Carousel */
-    .spotlight-carousel {
+    /* How I Work */
+    .principles-section {
       margin-bottom: 3.5rem;
     }
 
-    .carousel-tabs {
-      display: flex;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.1rem;
-    }
-
-    .spotlight-tab {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      font-family: var(--font-sans);
-      font-size: 0.88rem;
-      font-weight: 500;
-      padding: 0.65rem 1.15rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .spotlight-tab:hover {
-      color: var(--navy-deep);
-      border-color: var(--navy-mid);
-    }
-
-    .spotlight-tab.active {
-      background-color: var(--navy-deep);
-      color: #FFFFFF;
-      border-color: var(--navy-deep);
-    }
-
-    .spotlight-box {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 2.5rem 2.75rem;
-      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
-    }
-
-    .spotlight-box.theme-navy {
-      background-color: var(--navy-deep);
-      border-color: var(--navy-deep);
-      color: #FFFFFF;
-    }
-
-    .spotlight-top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 0.85rem;
-      flex-wrap: wrap;
-    }
-
-    .spotlight-index {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 600;
-      color: var(--accent-gold);
-    }
-
-    .spotlight-box.theme-navy .spotlight-index {
-      color: #D6BC8B;
-    }
-
-    .spotlight-controls {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .arrow-btn {
-      background-color: var(--bg-secondary);
-      border: 1px solid var(--border-subtle);
-      color: var(--navy-deep);
-      width: 34px;
-      height: 34px;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-    }
-
-    .arrow-btn:hover {
-      background-color: var(--navy-deep);
-      color: #FFFFFF;
-      border-color: var(--navy-deep);
-    }
-
-    .spotlight-box.theme-navy .arrow-btn {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.2);
-      color: #FFFFFF;
-    }
-
-    .spotlight-box.theme-navy .arrow-btn:hover {
-      background-color: #FFFFFF;
-      color: var(--navy-deep);
-    }
-
-    .spotlight-box h2 {
+    .principles-title {
       font-family: var(--font-serif);
       font-size: clamp(1.65rem, 2.8vw, 2.15rem);
       font-weight: 400;
       color: var(--navy-deep);
-      margin-bottom: 1.1rem;
       line-height: 1.2;
+      margin-bottom: 1.5rem;
     }
 
-    .spotlight-box.theme-navy h2 {
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .principle-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 1.75rem;
+    }
+
+    .principle-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--navy-deep);
+      margin-bottom: 0.75rem;
+    }
+
+    .principle-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .principle-card.navy {
+      background-color: var(--navy-deep);
+      border-color: var(--navy-deep);
+    }
+
+    .principle-card.navy h3 {
       color: #FFFFFF;
     }
 
-    .spotlight-copy p {
-      font-size: 1.02rem;
-      color: var(--text-muted);
-      line-height: 1.78;
-      margin-bottom: 1rem;
-      max-width: 860px;
-    }
-
-    .spotlight-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .spotlight-box.theme-navy .spotlight-copy p {
+    .principle-card.navy p {
       color: #D8E1EC;
-    }
-
-    .spotlight-footer-bar {
-      margin-top: 1.75rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid var(--border-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .spotlight-box.theme-navy .spotlight-footer-bar {
-      border-top-color: rgba(255, 255, 255, 0.16);
-    }
-
-    .dots {
-      display: flex;
-      gap: 0.45rem;
-      align-items: center;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: #CBD5E1;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      transition: all 0.2s ease;
-    }
-
-    .dot.active {
-      width: 22px;
-      border-radius: 999px;
-      background-color: var(--navy-deep);
-    }
-
-    .spotlight-box.theme-navy .dot {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .spotlight-box.theme-navy .dot.active {
-      background-color: #FFFFFF;
-    }
-
-    .step-counter {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .spotlight-box.theme-navy .step-counter {
-      color: #B8C7D9;
     }
 
     /* Stack Tags */
@@ -746,6 +606,7 @@
     @media (max-width: 860px) {
       .hero-grid,
       .quotes-grid,
+      .principles-grid,
       .case-details.open {
         grid-template-columns: 1fr;
       }
@@ -753,10 +614,6 @@
       .metrics-bar {
         grid-template-columns: 1fr;
         gap: 1.25rem;
-      }
-
-      .spotlight-box {
-        padding: 1.65rem;
       }
 
       .hero-grid {
@@ -818,19 +675,15 @@
               <span>I co-led AI transformation across marketing operations and coached the teams through it.</span>
             </li>
             <li>
-              <strong>From strategist to owner and builder</strong>
-              <span>I was brought in as the strategist on the global nurture program and ended up owning and building it end to end.</span>
-            </li>
-            <li>
-              <strong>Represented the people doing the work</strong>
-              <span>I embedded with marketers and activation teams to understand their pain points and goals, so what I built served their needs and not just the project's.</span>
+              <strong>Built for the people, not just the project</strong>
+              <span>I embed with the people who use the systems and take on whatever role the work needs: SME, builder, trainer, project lead. I go beyond the problem statement and stay close enough to every role to see the big picture and the impact across all of them, so I can represent their pain points, anticipate what they'll need, and build for their goals as well as the project's.</span>
             </li>
           </ul>
 
           <div class="highlight-card">
             <span class="eyebrow">Recent highlight &bull; Global Nurture Program &amp; Hub</span>
             <p class="body-text">
-              Embedded at Google, I took a global Marketo nurture program from a vision on a Miro board to a $150M+ pipeline engine in about a year. A weekly-refreshing interest profile delivered relevant content to every lead, across 10 languages. When spreadsheets couldn't keep up, I taught myself to code alongside AI and built the <strong>Global Nurture Hub</strong> that ran it: one-click email builds in Marketo, AI translation and QA, and a launch-health dashboard for leadership. Email build time dropped from about 3 hours to 30 minutes or less.
+              Brought in as the strategist on a global Marketo nurture program, I ended up its owner and builder, taking it from a vision on a Miro board to a $150M+ pipeline engine in about a year. A weekly-refreshing interest profile delivered relevant content to every lead, across 10 languages. When spreadsheets couldn't keep up, I taught myself to code alongside AI and built the <strong>Global Nurture Hub</strong> that ran it: one-click email builds in Marketo, AI translation and QA, and a launch-health dashboard for leadership. Email build time dropped from about 3 hours to 30 minutes or less.
             </p>
             <button class="expand-btn" onclick="switchTab('work')">Read the case study &rarr;</button>
           </div>
@@ -865,42 +718,19 @@
         </div>
       </div>
 
-      <!-- Toggleable Large Spotlight Carousel -->
-      <div class="spotlight-carousel">
-        <div class="carousel-tabs" role="tablist" aria-label="Perspective topics">
-          <button class="spotlight-tab active" onclick="setSpotlight(0)">Why Cross-Functional Range Is an Asset</button>
-          <button class="spotlight-tab" onclick="setSpotlight(1)">How I Think About &amp; Use AI</button>
-          <button class="spotlight-tab" onclick="setSpotlight(2)">What I’m Looking For Next</button>
-        </div>
-
-        <div id="spotlight-card" class="spotlight-box">
-          <div class="spotlight-top-row">
-            <span id="spotlight-kicker" class="spotlight-index">Perspective &bull; Range &amp; Big-Picture Thinking</span>
-            <div class="spotlight-controls">
-              <button class="arrow-btn" aria-label="Previous card" onclick="stepSpotlight(-1)">&larr;</button>
-              <button class="arrow-btn" aria-label="Next card" onclick="stepSpotlight(1)">&rarr;</button>
-            </div>
-          </div>
-
-          <h2 id="spotlight-title">Why Cross-Functional Range Is an Asset</h2>
-
-          <div id="spotlight-body" class="spotlight-copy">
-            <p>
-              In traditional org charts, people are often asked to pick a single narrow lane—just campaign execution, just CRM administration, or just front-end code. Because I’ve worn many hats across operations, technical project management, accounting, and software development, I naturally operate at the intersections where most projects stall.
-            </p>
-            <p>
-              Seeing the big picture isn't a lack of focus—it's how I spot upstream data issues before they break downstream reporting, translate effortlessly between engineering and marketing stakeholders, and design systems that actually work for the humans using them.
-            </p>
-          </div>
-
-          <div class="spotlight-footer-bar">
-            <div class="dots" id="spotlight-dots">
-              <button class="dot active" aria-label="Card 1" onclick="setSpotlight(0)"></button>
-              <button class="dot" aria-label="Card 2" onclick="setSpotlight(1)"></button>
-              <button class="dot" aria-label="Card 3" onclick="setSpotlight(2)"></button>
-            </div>
-            <span id="spotlight-counter" class="step-counter">01 / 03</span>
-          </div>
+      <!-- How I Work -->
+      <div class="principles-section">
+        <span class="eyebrow">Approach</span>
+        <h2 class="principles-title">I make the whole system work together.</h2>
+        <div class="principles-grid">
+          <article class="principle-card">
+            <h3>How I operate</h3>
+            <p>I embed myself in the systems and teams I support, learning how the work really happens so I can improve it from the inside. I invest in relationships across the organization, because trust is what turns a sound solution into one people adopt, and the people matter as much as the systems. A committed problem solver, I'm always looking for more effective, scalable ways to run the work, and I turn those improvements into lasting solutions: streamlined processes, thoughtful automation, and documentation and training that teams can build on long after the project ends. The result is operations that run smoothly, scale without strain, and work for the people who rely on them.</p>
+          </article>
+          <article class="principle-card navy">
+            <h3>What I'm looking for & why</h3>
+            <p>Lifecycle, platform administration, CRM sync, automation, analytics, project leadership, and AI are only part of the picture. My breadth is deliberate, not scattered: I understand how systems, data, workflows, reporting, and teams connect end to end, so I can step into new roles and responsibilities within the same realm with confidence. That's why I'm looking for senior roles across marketing operations and adjacent areas, from lifecycle and martech architecture to automation and program leadership, and why I seek out the ones that stretch me: growth makes me better at all of it.</p>
+          </article>
         </div>
       </div>
 
@@ -1089,71 +919,6 @@
   </footer>
 
   <script>
-    const spotlightCards = [
-      {
-        kicker: "Perspective • Range & Big-Picture Thinking",
-        title: "Why Cross-Functional Range Is an Asset",
-        themeNavy: false,
-        paragraphs: [
-          "In traditional org charts, people are often asked to pick a single narrow lane—just campaign execution, just CRM administration, or just front-end code. Because I’ve worn many hats across operations, technical project management, accounting, and software development, I naturally operate at the intersections where most projects stall.",
-          "Seeing the big picture isn't a lack of focus—it's how I spot upstream data issues before they break downstream reporting, translate effortlessly between engineering and marketing stakeholders, and design systems that actually work for the humans using them."
-        ]
-      },
-      {
-        kicker: "Perspective • Applied AI & Automation",
-        title: "How I Think About & Use AI",
-        themeNavy: false,
-        paragraphs: [
-          "I view AI as an operational multiplier—not a replacement for sound systems architecture or clean data governance. Without solid underlying workflows, AI just automates chaos faster.",
-          "In practice, I use AI as a force multiplier in my own builds—accelerating custom internal web app development, scripting, and automated QA—while helping teams identify pragmatic, high-ROI ways to embed AI into daily operations without compromising compliance or quality."
-        ]
-      },
-      {
-        kicker: "Direction • Roles & Partnerships",
-        title: "What I’m Looking For Next",
-        themeNavy: true,
-        paragraphs: [
-          "I am seeking a high-impact remote leadership, systems architecture, or technical project management role—or strategic consulting partnerships—where breadth of perspective is treated as a competitive advantage.",
-          "I thrive in environments with autonomy, clear outcomes, and complex operational puzzles: standing up global lifecycle engines, bridging MarTech and custom engineering, aligning cross-functional teams, and replacing manual busywork with thoughtful automation."
-        ]
-      }
-    ];
-
-    let activeSpotlight = 0;
-
-    function renderSpotlight() {
-      const item = spotlightCards[activeSpotlight];
-      const card = document.getElementById("spotlight-card");
-      card.classList.toggle("theme-navy", item.themeNavy);
-
-      document.getElementById("spotlight-kicker").textContent = item.kicker;
-      document.getElementById("spotlight-title").textContent = item.title;
-      document.getElementById("spotlight-body").innerHTML = item.paragraphs
-        .map(p => `<p>${p}</p>`)
-        .join("");
-
-      document.getElementById("spotlight-counter").textContent =
-        `0${activeSpotlight + 1} / 0${spotlightCards.length}`;
-
-      document.querySelectorAll(".spotlight-tab").forEach((tab, idx) => {
-        tab.classList.toggle("active", idx === activeSpotlight);
-      });
-
-      document.querySelectorAll("#spotlight-dots .dot").forEach((dot, idx) => {
-        dot.classList.toggle("active", idx === activeSpotlight);
-      });
-    }
-
-    function setSpotlight(index) {
-      activeSpotlight = index;
-      renderSpotlight();
-    }
-
-    function stepSpotlight(delta) {
-      activeSpotlight = (activeSpotlight + delta + spotlightCards.length) % spotlightCards.length;
-      renderSpotlight();
-    }
-
     function switchTab(tabName) {
       document.getElementById('btn-about').classList.toggle('active', tabName === 'about');
       document.getElementById('btn-work').classList.toggle('active', tabName === 'work');
