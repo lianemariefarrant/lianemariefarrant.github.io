@@ -59,6 +59,8 @@
     }
 
     .brand {
+      display: inline-block;
+      line-height: 1.25;
       font-family: var(--font-serif);
       font-size: 1.35rem;
       font-weight: 500;
@@ -68,12 +70,13 @@
     }
 
     .brand span {
+      display: block;
       font-family: var(--font-sans);
-      font-size: 0.78rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--text-muted);
-      margin-left: 0.65rem;
+      margin-top: 0.15rem;
       font-weight: 500;
     }
 
@@ -147,7 +150,7 @@
     /* Hero / About Layout */
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.45fr 0.85fr;
+      grid-template-columns: 1.3fr 1fr;
       gap: 4rem;
       align-items: start;
       margin-bottom: 4rem;
@@ -165,7 +168,7 @@
 
     h1 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 4vw, 3.1rem);
+      font-size: clamp(1.9rem, 3.4vw, 2.65rem);
       line-height: 1.16;
       font-weight: 400;
       color: var(--navy-deep);
@@ -227,6 +230,12 @@
     }
 
     /* Hero: roles strip & highlight card */
+    .hero-eyebrow {
+      font-size: 0.92rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+
     .hero-subhead {
       margin: 1.75rem 0 0.75rem;
     }
@@ -766,11 +775,17 @@
         gap: 1.75rem;
       }
 
+      .hero-eyebrow {
+        text-align: center;
+        font-size: 0.82rem;
+        margin-bottom: 1.25rem;
+      }
+
       .photo-frame {
         order: -1;
         position: relative;
         top: auto;
-        max-width: 210px;
+        max-width: 260px;
         padding: 0.6rem;
         margin: 0 auto;
       }
@@ -795,7 +810,7 @@
   <header>
     <div class="nav-container">
       <a href="#about" class="brand" onclick="switchTab('about'); return false;">
-        Liane Farrant
+        Liane Farrant <span>Lake Tahoe, CA</span>
       </a>
       <nav>
         <button id="btn-about" class="nav-btn active" onclick="switchTab('about')">About</button>
@@ -809,9 +824,9 @@
   <main>
     <!-- PAGE 1: ABOUT -->
     <section id="page-about" class="page-section active">
+      <span class="eyebrow hero-eyebrow">Senior Marketing Operations Leader &bull; Lifecycle &amp; Martech Architecture &bull; AI Automation &amp; Systems Design</span>
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">Senior Marketing Operations Leader &bull; Lifecycle &amp; Martech Architecture &bull; AI Automation &amp; Systems Design</span>
           <h1>Marketing operations, end to end: strategy, systems, people, and <em>the code in between.</em></h1>
           <p class="lead-text">
             I'm a senior marketing operations leader with eight years across lifecycle strategy, martech architecture, and AI automation, from startups to global enterprise. I design the programs, architect the systems behind them, and build the automation that makes them run. Then I make it stick: I translate between business and technical teams, keep stakeholders aligned, and train people and document the work so it lasts.
@@ -861,10 +876,6 @@
 
         <div class="photo-frame">
           <img src="headshot1.png" alt="Liane Farrant" />
-          <div class="photo-caption">
-            <span>Based in Lake Tahoe, CA</span>
-            <span>Open to Remote &amp; Advisory</span>
-          </div>
         </div>
       </div>
 
