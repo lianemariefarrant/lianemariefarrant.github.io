@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Liane Farrant — Senior Marketing Operations Strategist & Systems Architect</title>
+  <title>Liane Farrant — Senior Marketing Operations Strategist, Systems Architect &amp; TPM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -244,11 +244,11 @@
       color: var(--text-muted);
     }
 
-    /* Editorial Two-Column Philosophy & What I'm Looking For */
+    /* Editorial Three-Column Philosophy, AI & What I'm Looking For */
     .editorial-split {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
       margin-bottom: 4rem;
     }
 
@@ -256,7 +256,7 @@
       background-color: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 8px;
-      padding: 2.25rem;
+      padding: 2rem;
     }
 
     .editorial-box.navy-accent {
@@ -267,10 +267,11 @@
 
     .editorial-box h2 {
       font-family: var(--font-serif);
-      font-size: 1.65rem;
+      font-size: 1.55rem;
       font-weight: 400;
       margin-bottom: 1rem;
       color: var(--navy-deep);
+      line-height: 1.25;
     }
 
     .editorial-box.navy-accent h2 {
@@ -279,9 +280,9 @@
 
     .editorial-box.navy-accent p {
       color: #D2DCE8;
-      font-size: 0.96rem;
+      font-size: 0.95rem;
       line-height: 1.75;
-      margin-bottom: 1.15rem;
+      margin-bottom: 1.1rem;
     }
 
     /* Stack Tags */
@@ -549,7 +550,7 @@
   <header>
     <div class="nav-container">
       <a href="#about" class="brand" onclick="switchTab('about'); return false;">
-        Liane Farrant <span>Systems &amp; Marketing Operations</span>
+        Liane Farrant <span>Systems, Marketing Ops &amp; TPM</span>
       </a>
       <nav>
         <button id="btn-about" class="nav-btn active" onclick="switchTab('about')">About</button>
@@ -564,13 +565,13 @@
     <section id="page-about" class="page-section active">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">Senior Marketing Operations Strategist &amp; Systems Architect</span>
-          <h1>Connecting strategy, systems, and code to turn complex operations into <em>scalable growth.</em></h1>
+          <span class="eyebrow">Senior Marketing Operations Strategist &bull; Systems Architect &bull; Technical Project Manager</span>
+          <h1>Connecting strategy, systems, and AI to turn complex operations into <em>scalable growth.</em></h1>
           <p class="lead-text">
-            With over eight years of experience architecting MarTech ecosystems across enterprise organizations and agile teams, I specialize in untangling broken workflows, building custom internal tools, and aligning cross-functional teams around clean, reliable data.
+            With over eight years of experience architecting MarTech ecosystems and leading cross-functional technical initiatives, I bridge the gap between big-picture business strategy and hands-on execution. I specialize in building foundational systems from the ground up, untangling legacy technical debt, and using AI and custom code to eliminate operational bottlenecks.
           </p>
           <p class="body-text">
-            Most recently supporting global teams at Google, I scaled a Global Nurture Hub from $80M to $150M in pipeline impact, re-architected an 84-step legacy workflow into a streamlined engine, and built custom web applications to automate QA and live asset previews.
+            Most recently supporting global teams at Google, I architected a global Marketo nurture program from scratch—growing it from $0 to $150M in pipeline impact using weekly-refreshing lead interest profiles, 10-language localization, and dynamic Velocity-driven promotional layers. When rapid growth made managing two quarters simultaneously across spreadsheets impossible, I built the <strong>Global Nurture Hub</strong>: a custom web application centralizing workflows for content, leadership, and activation teams. Alongside this, I refactored an 84-step legacy workflow and engineered automated QA and live preview tools.
           </p>
           <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
             <button class="nav-btn active" style="padding: 0.75rem 1.4rem;" onclick="switchTab('work')">Explore Case Studies &rarr;</button>
@@ -590,12 +591,12 @@
 
       <div class="metrics-bar">
         <div class="metric-item">
-          <h3>$150M</h3>
-          <p>Pipeline scaled across four quarters via Global Nurture Hub architecture</p>
+          <h3>$0 &rarr; $150M</h3>
+          <p>Pipeline built from scratch via Global Marketo Nurture architecture</p>
         </div>
         <div class="metric-item">
           <h3>8+ Years</h3>
-          <p>Enterprise MarTech, CRM sync governance, and lifecycle automation</p>
+          <p>Enterprise MarTech, technical program delivery &amp; CRM sync governance</p>
         </div>
         <div class="metric-item">
           <h3>2x Certified</h3>
@@ -607,20 +608,30 @@
         <div class="editorial-box">
           <h2>Why Cross-Functional Range Is an Asset</h2>
           <p class="body-text">
-            In traditional org charts, people are often asked to pick a single narrow lane—just campaign execution, just CRM administration, or just front-end code. Because I’ve worn many hats across operations, accounting, hospitality leadership, and software development, I naturally operate at the intersections where most projects stall.
+            In traditional org charts, people are often asked to pick a single narrow lane—just campaign execution, just CRM administration, or just front-end code. Because I’ve worn many hats across operations, technical project management, accounting, and software development, I naturally operate at the intersections where most projects stall.
           </p>
           <p class="body-text" style="margin-bottom: 0;">
             Seeing the big picture isn't a lack of focus—it's how I spot upstream data issues before they break downstream reporting, translate effortlessly between engineering and marketing stakeholders, and design systems that actually work for the humans using them.
           </p>
         </div>
 
+        <div class="editorial-box">
+          <h2>How I Think About &amp; Use AI</h2>
+          <p class="body-text">
+            I view AI as an operational multiplier—not a replacement for sound systems architecture or clean data governance. Without solid underlying workflows, AI just automates chaos faster.
+          </p>
+          <p class="body-text" style="margin-bottom: 0;">
+            In practice, I use AI as a force multiplier in my own builds—accelerating custom internal web app development, scripting, and automated QA—while helping teams identify pragmatic, high-ROI ways to embed AI into daily operations without compromising compliance or quality.
+          </p>
+        </div>
+
         <div class="editorial-box navy-accent">
           <h2>What I’m Looking For Next</h2>
           <p>
-            I am seeking a high-impact remote leadership, systems architecture, or strategic operations role—or fractional consulting partnerships—where breadth of perspective is treated as a competitive advantage.
+            I am seeking a high-impact remote leadership, systems architecture, or technical project management role—or strategic consulting partnerships—where breadth of perspective is treated as a competitive advantage.
           </p>
           <p style="margin-bottom: 0;">
-            I thrive in environments with autonomy, clear outcomes, and complex operational puzzles: standing up global lifecycle engines, bridging MarTech and custom engineering, mentoring teams, and replacing manual busywork with thoughtful automation.
+            I thrive in environments with autonomy, clear outcomes, and complex operational puzzles: standing up global lifecycle engines, bridging MarTech and custom engineering, aligning cross-functional teams, and replacing manual busywork with thoughtful automation.
           </p>
         </div>
       </div>
@@ -629,16 +640,16 @@
         <h2 class="section-label">Core Capabilities &amp; Technical Stack</h2>
         <div class="tags-wrap">
           <span class="tag highlight">Adobe Marketo Engage (2x ACE)</span>
+          <span class="tag highlight">Velocity Scripting &amp; Dynamic Tokens</span>
           <span class="tag highlight">Salesforce (SFDC) Sync &amp; Architecture</span>
-          <span class="tag highlight">REST APIs &amp; Webhooks</span>
-          <span class="tag highlight">HTML / CSS / JavaScript</span>
+          <span class="tag highlight">Technical Project Management</span>
+          <span class="tag highlight">AI-Assisted Workflow &amp; App Development</span>
+          <span class="tag">REST APIs &amp; Webhooks</span>
+          <span class="tag">HTML / CSS / JavaScript</span>
           <span class="tag">Google Apps Script</span>
-          <span class="tag">Knak</span>
-          <span class="tag">HubSpot</span>
+          <span class="tag">Knak &amp; HubSpot</span>
           <span class="tag">Automated QA &amp; Internal Tooling</span>
-          <span class="tag">Global Lifecycle &amp; Nurture Strategy</span>
-          <span class="tag">Lead Scoring &amp; Attribution Governance</span>
-          <span class="tag">Cross-Functional Program Management</span>
+          <span class="tag">Global Lifecycle &amp; Multi-Language Scale</span>
           <span class="tag">Bubble.io</span>
         </div>
       </div>
@@ -659,27 +670,27 @@
         <article class="case-card">
           <div class="case-top">
             <div>
-              <div class="case-meta">Enterprise Lifecycle &amp; Global Scale</div>
-              <h2 class="case-title">Global Nurture Hub Architecture</h2>
+              <div class="case-meta">Enterprise Lifecycle &amp; Custom Hub Engineering</div>
+              <h2 class="case-title">Global Nurture Program &amp; Global Nurture Hub</h2>
             </div>
-            <div class="case-impact-badge">$80M &rarr; $150M Pipeline Impact</div>
+            <div class="case-impact-badge">$0 &rarr; $150M Pipeline Impact</div>
           </div>
           <p class="case-summary">
-            Designed and governed a centralized, multi-region nurture architecture supporting global enterprise teams at Google, enabling localized personalization without duplicating technical debt.
+            Architected a global Marketo nurture program from scratch—growing from two tracks to multiple streams across 5–6 marketing teams, 10 languages, weekly interest-profile refreshes, and Velocity-driven promotional layers—while building a custom web app to centralize dual-quarter production.
           </p>
           <button class="expand-btn" onclick="toggleDetails('cs1', this)">View Architecture &amp; Breakdown +</button>
           <div id="cs1" class="case-details">
             <div class="detail-col">
               <h4>The Challenge</h4>
-              <p>Regional marketing teams were operating in fragmented silos with inconsistent engagement logic, heavy manual campaign builds, and limited visibility into how nurture touches influenced enterprise pipeline.</p>
+              <p>Starting from zero and scaling rapidly across 5–6 marketing teams, multiple streams per track, 4–5 emails per track, 10 language versions, and dynamic promotional overlays created immense operational complexity. Managing two quarters at once—launching current while prepping next—in spreadsheets and Google Docs became unsustainable.</p>
             </div>
             <div class="detail-col">
               <h4>The Architecture &amp; Partnership</h4>
-              <p>Partnered across regional field marketing, content, and analytics teams to architect a modular Global Nurture Hub in Marketo Engage. Standardized entry/exit governance, dynamic localization tokens, and CRM campaign attribution.</p>
+              <p>Built the Marketo lifecycle engine from the ground up with a weekly-refreshing lead interest profile and Velocity tokens for modular promotional content. Partnered across content, promotional content, leadership, and activation/architecture teams, and engineered the Global Nurture Hub web app to centralize tracking, approvals, and execution.</p>
             </div>
             <div class="detail-col">
               <h4>The Outcome</h4>
-              <p>Generated $80M in attributed pipeline in its inaugural quarter and scaled to $150M across three subsequent quarters—while cutting regional campaign launch times and eliminating redundant build overhead.</p>
+              <p>Scaled from $0 to $150M in attributed pipeline impact, unified multi-team workflows across overlapping quarters, and gave global stakeholders a single source of truth as volume expanded.</p>
             </div>
           </div>
         </article>
@@ -811,11 +822,9 @@
 
   <script>
     function switchTab(tabName) {
-      // Update buttons
       document.getElementById('btn-about').classList.toggle('active', tabName === 'about');
       document.getElementById('btn-work').classList.toggle('active', tabName === 'work');
 
-      // Update sections
       document.getElementById('page-about').classList.toggle('active', tabName === 'about');
       document.getElementById('page-work').classList.toggle('active', tabName === 'work');
 
