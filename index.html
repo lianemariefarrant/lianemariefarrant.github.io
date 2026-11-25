@@ -577,11 +577,12 @@
     .more-item li { margin-bottom: 0.55rem; }
     .more-item li strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--navy-deep); margin-bottom: 0.1rem; }
 
-    .more-also { margin-top: 1.25rem; padding: 1.4rem 1.6rem; background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: 8px; }
-    .more-also h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--navy-deep); margin-bottom: 0.6rem; }
-    .more-also ul { margin: 0; padding-left: 1.1rem; font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); }
-    .more-also li { margin-bottom: 0.4rem; }
-    .more-also li strong { color: var(--navy-deep); }
+    .turned-to { margin: 0 0 3rem; }
+    .turn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .turn-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.4rem 1.6rem; }
+    .turn-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .turn-card h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400; color: var(--navy-deep); line-height: 1.3; margin-bottom: 0.5rem; }
+    .turn-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; }
 
     .case-details {
       display: none;
@@ -837,7 +838,8 @@
         grid-template-columns: 1fr;
       }
 
-      .case-grid {
+      .case-grid,
+      .turn-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1354,14 +1356,50 @@
               <li><strong>Outcome:</strong> Thousands of forms brought into line with correct legal language and consistent data capture.</li>
             </ul>
           </details>
+          <details class="more-item">
+            <summary><span><span class="more-name">Unsubscribe Data Reporting</span><span class="more-tag">Reporting &middot; Audience Insight</span></span></summary>
+            <ul>
+              <li><strong>Problem:</strong> Unsubscribes were tracked as a single catch-all number, so there was no way to see how people were leaving or why.</li>
+              <li><strong>Goal:</strong> Separate unsubscribes by pathway, so teams could see what was driving opt-outs and where to improve.</li>
+              <li><strong>What I did:</strong> Built reporting that split unsubscribes by email, by footer link, and by preference center changes, including opt-ins and opt-outs by topic, such as newsletters and events.</li>
+              <li><strong>Outcome:</strong> A clear, detailed view of audience behavior across every unsubscribe path.</li>
+            </ul>
+          </details>
         </div>
-        <div class="more-also">
-          <h4>Where Teams Turned to Me</h4>
-          <ul>
-            <li><strong>Unsubscribe data reporting:</strong> I broke the single &ldquo;unsubscribed&rdquo; bucket into specific signals: unsubscribes by email, by footer link, and preference center changes (opt-ins and opt-outs by topic).</li>
-            <li><strong>Technical issues and new tech projects:</strong> I was looped in on purpose whenever one came up.</li>
-            <li><strong>Training and documentation:</strong> I wrote and delivered both for new systems and processes, and for the teams that took over my work.</li>
-          </ul>
+      </section>
+
+      <section class="turned-to">
+        <h2 class="section-label work-section-title" style="margin-bottom: 0.4rem;">Where Teams Turned to Me</h2>
+        <p class="work-subhead">Whether a team had a problem to solve, an idea to shape, or a project to run, they brought me in early, to advise, build, manage, or strategize. Here&rsquo;s where, and why.</p>
+        <div class="turn-grid">
+        <div class="turn-card">
+          <h3>Systems expert</h3>
+          <p>The first call when something broke across Marketo, Salesforce, and the connections between them. I had the access and the knowledge to diagnose and fix it, and I explained what had happened.</p>
+        </div>
+        <div class="turn-card">
+          <h3>Integrations specialist</h3>
+          <p>Consulted on how systems should connect, what data should flow where, and how to avoid breaking what already worked.</p>
+        </div>
+        <div class="turn-card">
+          <h3>Implementation and project lead</h3>
+          <p>Brought in to plan, run, and land new tools and migrations, from timeline and stakeholders to testing and launch.</p>
+        </div>
+        <div class="turn-card">
+          <h3>Technical advisor on new initiatives</h3>
+          <p>Looped in early on new technology projects to say what was feasible, what the risks were, and what to do first.</p>
+        </div>
+        <div class="turn-card">
+          <h3>UAT and quality owner</h3>
+          <p>Managed and ran testing so that what shipped worked for the people using it.</p>
+        </div>
+        <div class="turn-card">
+          <h3>Trainer and documentation lead</h3>
+          <p>Wrote the guides and taught the teams, including the ones who took over my work.</p>
+        </div>
+        <div class="turn-card">
+          <h3>Translator between business and technical teams</h3>
+          <p>Turned business needs into technical requirements, and technical constraints into plain language.</p>
+        </div>
         </div>
       </section>
 
