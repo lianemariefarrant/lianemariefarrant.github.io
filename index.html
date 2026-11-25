@@ -229,6 +229,34 @@
       align-items: center;
     }
 
+    .jump-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.25rem;
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    .jump-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--navy-mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 1px;
+    }
+
+    .jump-links a:hover {
+      color: var(--navy-deep);
+      border-bottom-color: var(--accent-gold);
+    }
+
+    #sec-google,
+    #sec-drives,
+    #sec-architect,
+    #sec-next {
+      scroll-margin-top: 6rem;
+    }
+
     /* Hero: roles strip & highlight card */
     .hero-eyebrow {
       font-size: 0.92rem;
@@ -241,13 +269,14 @@
     }
 
     .hero-subhead-note {
+      display: block;
+      margin-top: 0.35rem;
       font-family: var(--font-sans);
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       font-weight: 500;
       color: var(--text-muted);
-      margin-left: 0.6rem;
     }
 
     .role-list {
@@ -363,7 +392,17 @@
       line-height: 1.7;
     }
 
+    .principle-card p + p {
+      margin-top: 1rem;
+    }
+
+    .principle-personal {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
     .principle-card.navy {
+      grid-column: 1 / -1;
       background-color: var(--navy-deep);
       border-color: var(--navy-deep);
     }
@@ -829,10 +868,20 @@
         <div>
           <h1>Marketing operations, end to end: strategy, systems, people, and <em>the code in between.</em></h1>
           <p class="lead-text">
-            I'm a senior marketing operations leader with eight years across lifecycle strategy, martech architecture, and AI automation, from startups to global enterprise. I design the programs, architect the systems behind them, and build the automation that makes them run. Then I make it stick: I translate between business and technical teams, keep stakeholders aligned, and train people and document the work so it lasts.
+            I'm a senior marketing operations leader with eight years across lifecycle strategy, martech architecture, and AI automation, from startups to global enterprise. I design the programs, architect the systems behind them, and build the automation that makes them run. Then I make it stick: I translate between business and technical teams, keep stakeholders aligned, and train people and document the work so it lasts. I'm at my best when the problem is complex, the people are curious, and there's something new to learn.
           </p>
+          <p class="lead-text">
+            Outside of work, you'll find me in Lake Tahoe hiking, camping, or paddleboarding, and when I'm indoors I'm learning something new or curled up with a book or a movie. I like to exercise both my mind and my body.
+          </p>
+          <nav class="jump-links" aria-label="On this page">
+            <a href="#sec-google">Where I've worked</a>
+            <a href="#sec-drives">What drives me</a>
+            <a href="#sec-architect">How I architect</a>
+            <a href="#sec-next">What I'm looking for</a>
+            <a href="#" onclick="switchTab('recs'); return false;">Recommendations</a>
+          </nav>
 
-          <h2 class="section-label hero-subhead">At Google <span class="hero-subhead-note">Embedded through Algomarketing</span></h2>
+          <h2 id="sec-google" class="section-label hero-subhead">Most recently at Google <span class="hero-subhead-note">Embedded through Algomarketing &amp; Magnit Global</span></h2>
           <ul class="role-list">
             <li>
               <strong>The trusted first call</strong>
@@ -921,14 +970,18 @@
 
       <!-- How I Work -->
       <div class="principles-section">
-        <span class="eyebrow">Approach</span>
-        <h2 class="principles-title">I make the whole system work together.</h2>
+        <span class="eyebrow">About Me</span>
+        <h2 class="principles-title">Curious by nature, systematic by design.</h2>
         <div class="principles-grid">
-          <article class="principle-card">
-            <h3>How I operate</h3>
-            <p>I embed myself in the systems and teams I support, learning how the work really happens so I can improve it from the inside. I invest in relationships across the organization, because trust is what turns a sound solution into one people adopt, and the people matter as much as the systems. A committed problem solver, I'm always looking for more effective, scalable ways to run the work, and I turn those improvements into lasting solutions: streamlined processes, thoughtful automation, and documentation and training that teams can build on long after the project ends. The result is operations that run smoothly, scale without strain, and work for the people who rely on them.</p>
+          <article id="sec-drives" class="principle-card">
+            <h3>What drives me</h3>
+            <p>I'm happiest where there's organized chaos, or chaos I get to organize. Part of my brain is always analyzing and evaluating, looking for what could be better or easier, and I've never found the off switch. I love learning and I love fixing, which is why operations made so much sense to me. AI has been a bonus to all of it: it lets me reach beyond what I already know, learn faster, and move quicker. Put building, problem solving, analytical thinking, curious people, and big-picture thinking in the same room, and that's where I'm at my best.</p>
           </article>
-          <article class="principle-card navy">
+          <article id="sec-architect" class="principle-card">
+            <h3>How I architect</h3>
+            <p>I start with the people and the process before the platform, and I invest in relationships across the organization, because trust is what turns a sound solution into one people adopt. I give every program one source of truth, so status and decisions live in the system and not in someone's head. I build repeatable patterns, so one team's win becomes everyone's standard. And I automate the handoffs instead of relying on discipline, so the system holds up as it grows and a new team can onboard quickly, without adding complexity.</p>
+          </article>
+          <article id="sec-next" class="principle-card navy">
             <h3>What I'm looking for and why</h3>
             <p>Lifecycle, platform administration, CRM sync, automation, analytics, project leadership, and AI are only part of the picture. My breadth is deliberate, not scattered: I understand how systems, data, workflows, reporting, and teams connect end to end, so I can step into new roles and responsibilities within the same realm with confidence. That's why I'm looking for senior roles across marketing operations and adjacent areas, from lifecycle and martech architecture to automation and program leadership, and why I seek out the ones that stretch me: growth makes me better at all of it.</p>
           </article>
@@ -1071,35 +1124,6 @@
             <div class="detail-col">
               <h4>The Outcome</h4>
               <p>Build, QA, and approval for a single email dropped from about 3 hours to under 30 minutes. Everyone worked from one source of truth as volume grew, and I could onboard and manage a team while running the program.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Case Study 2 -->
-        <article class="case-card">
-          <div class="case-top">
-            <div>
-              <div class="case-meta">Technical Debt Refactoring</div>
-              <h2 class="case-title">84-Step Legacy Workflow Re-Architecture</h2>
-            </div>
-            <div class="case-impact-badge">Zero-Downtime System Overhaul</div>
-          </div>
-          <p class="case-summary">
-            Audited, untangled, and rebuilt a brittle, 84-step operational processing workflow into a clean, modular, and self-documenting system.
-          </p>
-          <button class="expand-btn" onclick="toggleDetails('cs2', this)">View Architecture &amp; Breakdown +</button>
-          <div id="cs2" class="case-details">
-            <div class="detail-col">
-              <h4>The Challenge</h4>
-              <p>Years of reactive patches had created an 84-step daisy-chained workflow prone to race conditions, silent sync failures, and routing delays that nobody on the team could safely modify.</p>
-            </div>
-            <div class="detail-col">
-              <h4>The Architecture &amp; Partnership</h4>
-              <p>Mapped every dependency, webhook call, and Salesforce field update end-to-end. Collaborated with sales ops and engineering to consolidate redundant triggers, enforce strict order of operations, and build error-logging alerts.</p>
-            </div>
-            <div class="detail-col">
-              <h4>The Outcome</h4>
-              <p>Dramatically reduced processing latency and sync errors, restored stakeholder trust in lead routing, and created clear architectural documentation so future admins could scale safely.</p>
             </div>
           </div>
         </article>
